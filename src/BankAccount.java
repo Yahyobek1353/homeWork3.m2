@@ -16,6 +16,7 @@ public class BankAccount {
 
     public void withDraw(int sum) throws LimitException {
         if (sum > amount) {
+            System.out.println("Вы сняли с баланса: " + getAmount());
             throw new LimitException("Ошибка. На вашем балансе недостаточно среств. \n" +
                     "Ваш текущий баланс; ", getAmount());
         }
